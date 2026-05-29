@@ -1,99 +1,129 @@
 <template>
-  <nav class="bg-green-800 text-white p-4 flex justify-between items-center relative">
+  <nav class="navbar">
 
-    <img :src="logo" alt="logo" class="w-12 h-12 rounded-full object-cover">
+    <!-- Logo -->
+    <img :src="logo" class="logo" alt="Logo" />
 
-    <div class="flex gap-6 items-center">
+    <!-- Navigation Links -->
+    <div class="links">
 
-      <a href="/" class="hover:text-yellow-300"></a>
-        <a href="/About" class="hover:text-yellow-300">
-        About us
-      </a>
+      <RouterLink to="/">Home</RouterLink>
 
-      <a href="/service" class="hover:text-yellow-300">
-        Services
-      </a>
-  
-      <div
-        class="relative"
-        @mouseenter="galleryOpen = true"
-        @mouseleave="galleryOpen = false"
-      >
-        <button
-          type="button"
-          @click.prevent="galleryOpen = !galleryOpen"
-          class="hover:text-yellow-300 focus:outline-none"
-        >
-          Gallery  ▼
+      <RouterLink to="/about">About Us</RouterLink>
+
+      <!-- Gallery Dropdown -->
+      <div class="dropdown">
+        <button class="dropbtn">
+          Gallery ▼
         </button>
 
-        <div
-          v-show="galleryOpen"
-          class="absolute right-0 top-full w-40 rounded-md bg-white text-black shadow-lg ring-1 ring-black/10 z-10"
-        >
-          <a href="#photo" class="block px-4 py-2 text-sm hover:bg-gray-500">
-            Photo
-          </a>
-
-          <a href="#video" class="block px-4 py-2 text-sm hover:bg-gray-500">
-            Video
-          </a>
-        </div>
-
-      </div>
-
-     
-      <div
-        class="relative"
-        @mouseenter="destinationOpen = true"
-        @mouseleave="destinationOpen = false"
-      >
-        <button
-          type="button"
-          @click.prevent="destinationOpen = !destinationOpen"
-          class="hover:text-yellow-300 focus:outline-none"
-        >
-          Destinations  ▼
-        </button>
-
-        <div
-          v-show="destinationOpen"
-          class="absolute right-0 top-full w-48 rounded-md bg-white text-black shadow-lg ring-1 ring-black/10 z-10"
-        >
-          <a href="#kigali" class="block px-4 py-2 text-sm hover:bg-gray-500">
-            Kigali
-          </a>
-
-          <a href="#north" class="block px-4 py-2 text-sm hover:bg-gray-500">
-            Northern Province
-          </a>
-
-          <a href="#south" class="block px-4 py-2 text-sm hover:bg-gray-500">
-            Southern Province
-          </a>
-
-          <a href="#east" class="block px-4 py-2 text-sm hover:bg-gray-500">
-            Eastern Province
-          </a>
-
-          <a href="#west" class="block px-4 py-2 text-sm hover:bg-gray-500">
-            Western Province
-          </a>
+        <div class="dropdown-content">
+          <RouterLink to="/photos">Photos</RouterLink>
+          <RouterLink to="/videos">Videos</RouterLink>
         </div>
       </div>
 
-      <a href="/contact" class="hover:text-yellow-500">
-        Contact
-      </a>
+      <!-- Destination Dropdown -->
+      <div class="dropdown">
+        <button class="dropbtn">
+          Destination ▼
+        </button>
+
+        <div class="dropdown-content">
+          <RouterLink to="/kigali">Kigali</RouterLink>
+          <RouterLink to="/north">Northern Province</RouterLink>
+          <RouterLink to="/south">Southern Province</RouterLink>
+          <RouterLink to="/east">Eastern Province</RouterLink>
+          <RouterLink to="/west">Western Province</RouterLink>
+        </div>
+      </div>
+
+      <RouterLink to="/service">Services</RouterLink>
+
+      <RouterLink to="/contact">Contact</RouterLink>
 
     </div>
+
   </nav>
 </template>
 
-<script setup>
-import { ref } from 'vue'
-import logo from '@/assets/images/img.png'
 
-const galleryOpen = ref(false)
-const destinationOpen = ref(false)
-</script>
+<style scoped>
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1b4332;
+  padding: 15px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo */
+.logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Links */
+.links {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+/* Normal Links */
+.links a,
+.dropbtn {
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.links a:hover,
+.dropbtn:hover {
+  color: gold;
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+}
+
+/* Dropdown Content */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 200px;
+  border-radius: 8px;
+  overflow: hidden;
+  top: 35px;
+}
+
+/* Dropdown Links */
+.dropdown-content a {
+  display: block;
+  padding: 12px;
+  color: #1b4332;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Show Dropdown */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+</style>
