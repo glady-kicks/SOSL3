@@ -11,46 +11,36 @@ import { RouterLink } from 'vue-router'
         <h3 class="text-yellow-300 font-bold text-lg mb-3">
           TEMBERA U RWANDA
         </h3>
-
         <p class="text-sm text-green-200">
           Discover the beauty of the land of a thousand hills.
         </p>
       </div>
 
       <div>
-        <h3 class="text-yellow-300 font-bold text-lg mb-3">
-          Quick Links
-        </h3>
-
+        <h3 class="text-yellow-300 font-bold text-lg mb-3">Quick Links</h3>
         <ul class="space-y-2 text-sm">
-          <li><RouterLink to="/home" class="hover:text-yellow-300">Home</RouterLink></li>
-          <li><RouterLink to="/about" class="hover:text-yellow-300">About</RouterLink></li>
-          <li><RouterLink to="/services" class="hover:text-yellow-300">Services</RouterLink></li>
-          <li><RouterLink to="/contacts" class="hover:text-yellow-300">Contacts</RouterLink></li>
+          <li><RouterLink to="/"        class="hover:text-yellow-300">Home</RouterLink></li>
+          <li><RouterLink to="/about"   class="hover:text-yellow-300">About</RouterLink></li>
+          <li><RouterLink to="/service" class="hover:text-yellow-300">Services</RouterLink></li>
+          <li><RouterLink to="/contact" class="hover:text-yellow-300">Contact</RouterLink></li>
         </ul>
       </div>
 
       <div>
-        <h3 class="text-yellow-300 font-bold text-lg mb-3">
-          Destinations
-        </h3>
-
+        <h3 class="text-yellow-300 font-bold text-lg mb-3">Destinations</h3>
         <ul class="space-y-2 text-sm">
-          <li><RouterLink to="/" class="hover:text-yellow-300">Northern Province</RouterLink></li>
-          <li><RouterLink to="/southern-province" class="hover:text-yellow-300">Southern Province</RouterLink></li>
-          <li><RouterLink to="/eastern-province" class="hover:text-yellow-300">Eastern Province</RouterLink></li>
-          <li><RouterLink to="/western-province" class="hover:text-yellow-300">Western Province</RouterLink></li>
-          <li><RouterLink to="/kigali-city" class="hover:text-yellow-300">City of Kigali</RouterLink></li>
+          <li><RouterLink to="/north"  class="hover:text-yellow-300">Northern Province</RouterLink></li>
+          <li><RouterLink to="/south"  class="hover:text-yellow-300">Southern Province</RouterLink></li>
+          <li><RouterLink to="/east"   class="hover:text-yellow-300">Eastern Province</RouterLink></li>
+          <li><RouterLink to="/west"   class="hover:text-yellow-300">Western Province</RouterLink></li>
+          <li><RouterLink to="/kigali" class="hover:text-yellow-300">City of Kigali</RouterLink></li>
         </ul>
       </div>
 
       <div>
-        <h3 class="text-yellow-300 font-bold text-lg mb-3">
-          Contacts
-        </h3>
-
+        <h3 class="text-yellow-300 font-bold text-lg mb-3">Contacts</h3>
         <ul class="space-y-2 text-green-300 text-sm">
-          <li>Email:glady@gmail.rw</li>
+          <li>Email: glady@gmail.rw</li>
           <li>Phone: +250 784645467</li>
           <li>Address: Kigali, Rwanda</li>
         </ul>
