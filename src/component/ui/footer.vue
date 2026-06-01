@@ -40,8 +40,8 @@ import { RouterLink } from 'vue-router'
       <div>
         <h3 class="text-yellow-300 font-bold text-lg mb-3">Contacts</h3>
         <ul class="space-y-2 text-green-300 text-sm">
-          <li>Email: glady@gmail.rw</li>
-          <li>Phone: +250 784645467</li>
+          <li>Email: gladybadest@gmail.com</li>
+          <li>Phone: +250 7963648443</li>
           <li>Address: Kigali, Rwanda</li>
         </ul>
       </div>
