@@ -4,6 +4,8 @@ import Home from '../views/home.vue'
 import About from '../views/about.vue'
 import Service from '../views/service.vue'
 import Contact from '../views/contact.vue'
+import Login from '../views/login.vue'
+import Register from '../views/register.vue'
 
 import Photos from '../views/photos.vue'
 import Videos from '../views/video.vue'
@@ -71,6 +73,16 @@ const router = createRouter({
       path: '/west',
       name: 'west',
       component: Western
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: Login
+    },
+    {
+      path: '/register',
+      name: 'register',
+      component: Register
     }
   ]
 })

@@ -40,7 +40,7 @@ import { RouterLink } from 'vue-router'
       <div>
         <h3 class="text-yellow-300 font-bold text-lg mb-3">Contacts</h3>
         <ul class="space-y-2 text-green-300 text-sm">
-          <li>Email: gladybadest@gmail.com</li>
+          <li>Email: cyomoroarihoricky@gmail.com</li>
           <li>Phone: +250 7963648443</li>
           <li>Address: Kigali, Rwanda</li>
         </ul>
@@ -50,7 +50,7 @@ import { RouterLink } from 'vue-router'
 
     <div class="border-t border-green-600 mt-8 pt-4 text-sm text-green-300">
       <p class="text-center">
-        &copy; 2026 TemberaURwanda. All rights reserved.
+        &copy;designed by CYOMORO Ariho ricky 2026 TemberaURwanda. All rights reserved.
       </p>
     </div>
 
